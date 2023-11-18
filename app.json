@@ -1,0 +1,118 @@
+{
+  "name": "DDEV-BOT",
+  "description": "Enhance your WhatsApp experience with DDEV-BOT, a Node.js-powered bot built to elevate your interactions.",
+  "logo": "https://graph.org/file/de88693dba23f64e3c9de.jpg",
+  "keywords": ["DDEV-BOT", "MD", "WhatsApp bot", "dark-devil-botz", "multi-device", "Baileys"],
+  "success_url": "/",
+  "stack": "container",
+
+  "env": {
+    "OWNER_NAME": {
+      "description": "The name of the Bot Owner",
+      "value": "DARK DEVIL"
+    },
+    "AUTO_STATUS_SAVER": {
+      "description": "Automatically saves the status of every person and sends it to the log number.",
+      "required": false
+    },
+    "AUTO_STATUS_READER": {
+      "description": "Automatically views the status of every person.",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Insert your HEROKU API KEY",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "This field will be ignored. Heroku will generate a random app name.",
+      "required": true
+    },
+    "THUMB_IMAGE": {
+      "description": "Thumbnail for the bot.",
+      "value": "https://telegra.ph/file/fb7993e24f7ecdaecbed5.jpg"
+    },
+    "ANTI_BAD_WORD": {
+      "description": "Enter words here if you want the bad word filter enabled; otherwise, leave it blank.",
+      "required": false
+    },
+    "ANTILINK_VALUES": {
+      "description": "Words for the antilink filter.",
+      "value": "chat.whatsapp.com",
+      "required": false
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Enter 'true' or 'false' to enable or disable continuous bot availability.",
+      "required": false
+    },
+    "ANTILINK_ACTION": {
+      "description": "Action to be taken for antilink violations.",
+      "value": "remove",
+      "required": false
+    },
+    "LEVEL_UP_MESSAGE": {
+      "description": "Set to 'true' if you want the bot to send a Level up message in the chat.",
+      "required": false,
+      "value": "false"
+    },
+    "READ_MESSAGE": {
+      "description": "Set to 'true' if you want the bot to read all messages.",
+      "required": false,
+      "value": "true"
+    },
+    "DISABLE_PM": {
+      "description": "Disable bot in private messages.",
+      "value": "false",
+      "required": false
+    },
+    "PREFIX": {
+      "description": "Enter your desired prefix for the bot.",
+      "required": true,
+      "value": "."
+    },
+    "OWNER_NUMBER": {
+      "description": "Phone numbers of users you want to be admins for the bot (in international format without '+' and multiple numbers separated by a comma ',')",
+      "value": "94703892615"
+    },
+    "SESSION_ID": {
+      "description": "Insert the long SESSION_ID here. If you don't have one, visit https://replit.com/@DARK-DEVIL-BOTZ/DDEV-SESSION?v=1"
+    },
+    "OPENAI_API_KEY": {
+      "description": "Insert your OPENAI API key here. Get it from platform.openai.com",
+      "value": "null",
+      "required": false
+    },
+    "MONGODB_URI": {
+      "description": "A secret string for MongoDB connection (required). Change for a better experience.",
+      "value": "mongodb+srv://ddevofc:darkdevil@cluster0.4vtn9lo.mongodb.net/?retryWrites=true&w=majority"
+    },
+    "THEME": {
+      "description": "Specify the theme name you want to use. The available theme is 'DDEV'; do not change it to avoid errors.",
+      "value": "VAJIRA"
+    },
+    "WORKTYPE": {
+      "description": "Specify the worktype of your bot: use 'public' or 'private'. If private, only the bot number can use it; if public, everyone can use it.",
+      "value": "public"
+    },
+    "AUTO_REACTION": {
+      "description": "React with emojis to all commands.",
+      "value": "true",
+      "required": false
+    },
+    "PACK_INFO": {
+      "description": "Specify packname;authorname.",
+      "value": "🌹⃝⃘̉̉̉̉̉̉𝙳𝙳𝙴𝚅 𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂;𝙱𝚈 𝙳𝙰𝚁𝙺 𝙳𝙴𝚅𝙸𝙻۝⃟̥̩̩̩̥",
+      "required": false
+    },
+    "heroku": {
+      "description": "Specify whether the bot is hosted on Heroku or not.",
+      "value": "true",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
