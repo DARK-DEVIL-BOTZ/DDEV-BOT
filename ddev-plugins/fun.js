@@ -1,16 +1,3 @@
-/**
-
-                                                            
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Izuku-Md
- * @author : excel <https://github.com/excelottah6>
- * @description : Izuku,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
-
 const { dare, truth, random_question } = require('../lib/truth-dare.js')
 const axios = require('axios')
 const { cmd } = require('../lib')
@@ -70,11 +57,12 @@ cmd({
     async(Void, citel, text) => {
         var quoo = await axios.get(`https://favqs.com/api/qotd`)
         const replyf = `
-✻ ═════ •❅• ═════ ✼
-║ *🗂Content:* ${quoo.data.quote.body}
-║ *👤Author:* ${quoo.data.quote.author}
+▧▬▬▬▬▬▬▬▬▬▬▬▷
+║
+╟ 🎁 *𝙲𝙾𝙽𝚃𝙴𝙽𝚃:* ${quoo.data.quote.body}
+╟ 👤 *𝙰𝚄𝚃𝙷𝙾𝚁 :* ${quoo.data.quote.author}
 ║    
-✻ ═════ •❅• ═════ ✼ `
+▧▬▬▬▬▬▬▬▬▬▬▬▷ `
 return citel.reply(replyf)
     }
 
@@ -95,7 +83,7 @@ return citel.reply(replyf)
             Example: ${data.list[0].example.replace(/\[/g, "").replace(/\]/g, "")}`
             return citel.reply(textt)
                     } catch {
-                        return citel.reply(`No result for ${text}`)
+                        return citel.reply(`𝙽𝙾 𝚁𝙴𝚂𝚄𝙻𝚃 𝙵𝙾𝚁 ${text}`)
                     }
     }
 )

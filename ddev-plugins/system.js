@@ -1,16 +1,3 @@
-/**
-
-                                                            
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
-
 const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config ,sleep} = require('../lib')
 const { TelegraPh } = require('../lib/scraper')   
 const util = require('util')
@@ -254,19 +241,16 @@ cmd({
         async(Void, citel, text, isAdmins) => {
             
             const alivtxt = `
-⦁━⦁👑𝙆𝙄𝙉𝙂-𝙑𝘼𝙅𝙄𝙍𝘼-𝙈𝘿👑⦁━⦁\n\nHello, ${citel.pushName},\n
-
-_හරියනකොට අඩන මිනිස්සු වරදිනකොට හිනා වෙනවා🤘_
-━━━✥◈✥━━━
-🎋►*Version:-* _0.0.7_
-🎋►*Uptime:-* _${runtime(process.uptime())}_
-🎋►*Owner:-* _${Config.ownername}_
-🎋►*Branch:-* _${Config.BRANCH}_
-━━━✥◈✥━━━\n\n📲 Install Bot➣ https://github.com/vajirabot1/KING-VAJIRA-MD\n💻 Youtube channel➣
-https://youtube.com/@gamingewingyt6216\n🗃️ Public Group➣ https://chat.whatsapp.com/BvNbfgOzzo77urGqoNjThk\n\n ━━━━━━━━━━━━\nහිමි නැති ආදරෙට බොරු අයිතිවාසිකම් කීවත් හිමි වෙන්නෙ නැ කිසිදාකවත්💔\n
-_Type ${prefix}menu for my command list._
-
-_━━━Powered by Vajira Rathnayaka━━━_
+╔══════════☀ ══════════▷
+❇️►*𝙱𝙾𝚃 :* 𝙳𝙳𝙴𝚅
+❇️►*𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :* 2.0.0
+❇️►*𝚄𝙿𝚃𝙸𝙼𝙴 :* ${runtime(process.uptime())}
+❇️►*𝙾𝚆𝙽𝙴𝚁 :* ${Config.ownername}
+❇️►*𝙱𝚁𝙰𝙽𝙲𝙷 :* ${Config.BRANCH}
+\n\n🔴➣ 𝙱𝙾𝚃 𝚁𝙴𝙿𝙾 : https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT\n☀➣ 𝚈𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : https://youtube.com/@SLDarkDevil\n📢➣ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 : https://chat.whatsapp.com/H3h5SJCnnCl39bXOKq7t6e\n
+𝚃𝚈𝙿𝙴 ${prefix}ddev 𝙵𝙾𝚁 𝙶𝙴𝚃 𝙼𝚈 𝙵𝚄𝙻𝙻 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂!  
+╚══════════════════ ════▷\n
+     *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*
 `;
             let aliveMessage = {
                 image: {

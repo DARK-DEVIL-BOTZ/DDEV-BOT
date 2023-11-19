@@ -17,23 +17,7 @@ async(Void, citel,text) => {
         let {data} = await axios.get(`http://api.brainshop.ai/get?bid=167991&key=aozpOoNOy3dfLgmB&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
         return citel.reply(data.cnt);  
     }
-    if (!text) return citel.reply(`Hey there! ${citel.pushName}. How are you doing these days?`);
-    // const { Configuration, OpenAIApi } = require("openai");
-    // const configuration = new Configuration({
-    //     apiKey: Config.OPENAI_API_KEY || "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",
-    // });
-    // const openai = new OpenAIApi(configuration);
-    // const completion = await openai.createCompletion({
-    //     model: "text-davinci-002",
-    //     prompt: text,
-    //     temperature: 0.5,
-    //     max_tokens: 80,
-    //     top_p: 1.0,
-    //     frequency_penalty: 0.5,
-    //     presence_penalty: 0.0,
-    //     stop: ['"""'],
-    // });
-    // citel.reply(completion.data.choices[0].text);
+    if (!text) return citel.reply(`𝙷𝙴𝚈 𝚃𝙷𝙴𝚁𝙴! ${citel.pushName}. 𝚃𝙴𝙻𝙻 𝚃𝙾 𝙳𝙳𝙴𝚅, 𝙰𝙱𝙾𝚄𝚃 𝚈𝙾𝚄𝚁𝚂𝙴𝙻𝙵! `);
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -48,7 +32,7 @@ async(Void, citel,text) => {
 
   const data = await response.json();
   console.log("GPT REPONCE : ",data); 
-  if (!data.choices || data.choices.length === 0) {citel.reply("*Invalid ChatGPT API Key, Please Put New Key*"); }
+  if (!data.choices || data.choices.length === 0) {citel.reply("*𝙸𝙽𝚅𝙰𝙻𝙸𝙸𝙳 𝙲𝙷𝙰𝚃𝙶𝙿𝚃 𝙰𝙿𝙸 𝙺𝙴𝚈, 𝙿𝙻𝙴𝙰𝚂𝙴 𝙸𝙽𝚂𝙴𝚁𝚃 𝙰𝙿𝙸 𝙺𝙴𝚈*"); }
   return await  citel.reply(data.choices[0].message.content)
 	
 }
@@ -65,8 +49,8 @@ cmd({
 async(Void, citel,text,{isCreator}) => 
 {
 //if (!isCreator) return citel.reply(tlang().owner)
-if (Config.OPENAI_API_KEY=='') return citel.reply('You Dont Have OPENAI_API_KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys');
-if (!text) return citel.reply(`*Give Me A Query To Get Dall-E Reponce ?*`); 
+if (Config.OPENAI_API_KEY=='') return citel.reply('𝙿𝙻𝙴𝙰𝚂𝙴 𝙸𝙽𝚂𝙴𝚁𝚃 OPENAI_API_KEY \n𝙿𝙻𝙴𝙰𝚂𝙴 𝙲𝚁𝙴𝙰𝚃𝙴 𝙾𝙿𝙴𝙽𝙰𝙸 𝙰𝙿𝙸 𝙺𝙴𝚈 𝙵𝚁𝙾𝙼 𝙶𝙸𝚅𝙴𝙽 𝙻𝙸𝙽𝙺 \nhttps://platform.openai.com/account/api-keys');
+if (!text) return citel.reply(`*𝙶𝙸𝙼𝙼𝙴 𝙰 𝚀𝚄𝙴𝚁𝚈 𝚃𝙾 𝙶𝙴𝚃 𝙳𝙰𝙻𝙻-𝙴 𝚁𝙴𝚂𝙿𝙾𝙽𝙲𝙴!*`); 
 const imageSize = '256x256'
 const apiUrl = 'https://api.openai.com/v1/images/generations';
 const response = await fetch(apiUrl, {
@@ -86,7 +70,7 @@ body: JSON.stringify({
 const data = await response.json();
 let buttonMessage = {
     image:{url:data.data[0].url},
-    caption : '*---Your DALL-E Result---*'
+    caption : '*✅ 𝚈𝙾𝚄𝚁 𝙳𝙰𝙻𝙻-𝙴 𝚁𝙴𝚂𝚄𝙻𝚃𝚂!*'
 
 }
 
@@ -100,19 +84,12 @@ cmd({
         alias: ["git", "sc", "script"],
         desc: "Sends info about repo.",
         category: "general",
-	react: "📃",
+	react: "🎁",
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/vajirabot1/KING-VAJIRA-MD')
-        let cap = `Hey ${citel.pushName}\n
-╭┈────────────    .· * • ˚
-│*⭐ Total Stars:* ${data.stargazers_count} stars
-│*🍴 Forks:* ${data.forks_count} forks
-│*📡 Repo:* https://github.com/vajirabot1/KING-VAJIRA-MD
-│*🏘Group:* https://chat.whatsapp.com/BvNbfgOzzo77urGqoNjThk
-│*🧑‍💻Deploy VAJIRA MD*:https://github.com/vajirabot1/KING-VAJIRA-MD
-╰──────────────✬      * ˚  ✶`
+        let { data } = await axios.get('https://api.github.com/repos/DARK-DEVIL-BOTZ/DDEV-BOT')
+        let cap = `*✒️ _𝙳𝙳𝙴𝚅 𝚂𝙲𝚁𝙸𝙿𝚃_ 📃*\n\n*🌟 𝚃𝙾𝚃𝙰𝙻 𝚂𝚃𝙰𝚁𝚂*: ${data.stargazers_count} ✨\n*🍴 𝚃𝙾𝚃𝙰𝙻 𝙵𝙾𝚁𝙺𝚂*: ${data.forks_count} 𝙵𝙾𝚁𝙺𝚂\n*🎓 𝙶𝙸𝚃𝙷𝚄𝙱*: https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT\n\n😊 𝙳𝚘𝚗𝚝 𝙵𝚘𝚛𝚐𝚎𝚝 𝚃𝚘 𝙵𝚘𝚕𝚕𝚘𝚠 𝙼𝚎 𝙾𝚗 *𝙶𝙸𝚃𝙷𝚄𝙱* 𝙰𝚗𝚍 𝙶𝚒𝚟𝚎 𝙰 ⭐ 𝚃𝚘 𝙼𝚢 𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝚜`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -120,7 +97,7 @@ cmd({
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "Vajira-Repo",
+                    title: "DDEV-REPO",
                     body: "Easy to Use",
                     thumbnail: log0,
                     mediaType: 4,
@@ -141,7 +118,7 @@ cmd({
         alias: ["about"],
         desc: "To check bot status",
         category: "general",
-	react: "📃",
+	react: "🎰",
         filename: __filename,
     },
     async(Void, citel) => {
@@ -149,15 +126,15 @@ cmd({
         timestampe = speed();
         latensie = speed() - timestampe;
         let ter = `
-ㅤ ────────────────────────── .°୭̥ ❁ 	
-╰─➤｡･:*˚:✧｡ *${tlang().title}* ｡･:*˚:✧｡
-╰─➤*🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
-╰─➤*⚡️Speed:* ${latensie.toFixed(4)} ms
-╰─➤*⏱Uptime:* ${runtime(process.uptime())}
-╰─➤*📡Version:* 0.0.8
-╰─➤*👤Owner:*  ${Config.ownername}
-╰─➤*Powered by ${tlang().title}*
-°୭̥ ❁ ───────────────────────── .°୭̥ ❁ `;
+┏━━━━━━━༺*${tlang().title}*༻━━━━━━━▶
+┃ 
+┃☞*📃 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽* : Elevate your WhatsApp experience with DDEV-BOT, A multi-device bot by Dark Devil.
+┃☞*📈 𝚂𝙿𝙴𝙴𝙳* : ${latensie.toFixed(4)} 𝚖𝚜
+┃☞*⏳ 𝚄𝙿𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
+┃☞*🧬 𝚅𝙴𝚁𝚂𝙸𝙾𝙽* : 2.0.0
+┃☞*👤 𝙾𝚆𝙽𝙴𝚁* : ${Config.ownername}
+┃    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━▶ `;
         let buttonMessaged = {
             image: {
                 url: await botpic(),

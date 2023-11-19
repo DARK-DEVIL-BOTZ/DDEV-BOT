@@ -1,18 +1,3 @@
-/*
- *
- 
-                                                            
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
- * @version 0.0.6
- *
- */
-
 const {cmd} = require('../lib')
 const PastebinAPI = require("pastebin-js");
 pastebin = new PastebinAPI("xSbX7s8hXdO-RNug5HpNiLhkAQdEbQFT");
@@ -23,8 +8,8 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        if(!citel.quoted) return citel.reply('Please quote any text to get link.')
+        if(!citel.quoted) return citel.reply('𝙿𝙻𝙴𝙰𝚂𝙴 𝚀𝚄𝙾𝚃𝙴 𝙰𝙽𝚈 𝚃𝙴𝚇𝚃 𝚃𝙾 𝙶𝙴𝚃 𝙻𝙸𝙽𝙺!')
         let data = await pastebin.createPaste(citel.quoted.text, "Secktor-Pastebin")
-        citel.reply('_Here is your link._\n'+data)
+        citel.reply('𝙷𝙴𝚁𝙴 𝙸𝚂 𝚈𝙾𝚄𝚁 𝙻𝙸𝙽𝙺!\n'+data)
     }
 );

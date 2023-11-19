@@ -1,14 +1,3 @@
-/**
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
-
 const os = require('os')
 const moment = require("moment-timezone")
 const fs = require("fs")
@@ -20,11 +9,11 @@ const Secktor = require('../lib/src')
 
     //---------------------------------------------------------------------------
 Secktor.cmd({
-            pattern: "help",
+            pattern: "ddev",
             alias: ["menu"],
             desc: "Help list",
             category: "general",
-            react: "🧑‍💻",
+            react: "📑",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -32,12 +21,12 @@ Secktor.cmd({
             if (text.split(" ")[0]) {
                 let arr = [];
                 const cmd = commands.find((cmd) => cmd.pattern === (text.split(" ")[0].toLowerCase()))
-                if (!cmd) return await citel.reply("*❌No Such commands.*");
-                else arr.push(`*🍁Command:* ${cmd.pattern}`);
-                if (cmd.category) arr.push(`*🧩Category:* ${cmd.category}`);
-                if (cmd.alias) arr.push(`*🧩Alias:* ${cmd.alias}`);
-                if (cmd.desc) arr.push(`*🧩Description:* ${cmd.desc}`);
-                if (cmd.use) arr.push(`*〽️Usage:*\n \`\`\`${prefix}${cmd.pattern} ${cmd.use}\`\`\``);
+                if (!cmd) return await citel.reply("🙉 𝙷𝙴𝚈 *${pushname}* 𝚃𝙷𝙸𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙼𝙴𝙳! 𝚃𝚈𝙿𝙴 *${prefix}ddev* 𝚃𝙾 𝙶𝙴𝚃 𝙼𝚈 𝙵𝚄𝙻𝙻 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙻𝙸𝚂𝚃!");
+                else arr.push(`*💸 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 :* ${cmd.pattern}`);
+                if (cmd.category) arr.push(`*📦 𝙲𝙰𝚃𝙴𝙶𝙾𝚁𝚈 :* ${cmd.category}`);
+                if (cmd.alias) arr.push(`*🔰 𝙰𝙻𝙸𝙰𝚂:* ${cmd.alias}`);
+                if (cmd.desc) arr.push(`*📄 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 :* ${cmd.desc}`);
+                if (cmd.use) arr.push(`*❇️ 𝚄𝚂𝙰𝙶𝙴 :*\n \`\`\`${prefix}${cmd.pattern} ${cmd.use}\`\`\``);
                 return await citel.reply(arr.join('\n'));
             } else {
                 const cmds = {}
@@ -49,40 +38,43 @@ Secktor.cmd({
                 })
                 const time = moment(moment())
                     .format('HH:mm:ss')
-                moment.tz.setDefault('Asia/KOLKATA')
+                moment.tz.setDefault('Asia/Colombo')
                     .locale('id')
-                const date = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `────⦁🍁 ` + fancytext(Config.ownername.split('KING VAJIRA MD')[0], 58) + ` 🍁⦁────\n`
+                let str = `☀┉┉┉┉⥁` + fancytext(Config.ownername.split('DDEV BOT')[0], 58) + `⥀┉┉┉┉☀\n`
                 str +=
-                    '' + `💓𝗵𝗲𝗹𝗹𝗼𝘄 ${citel.pushName}💓
-╭───────────●╮
-╎☀ 𝗴𝗼𝗼𝗱 𝗺𝗼𝗿𝗻𝗶𝗻𝗴
-╰───────────●╯
-╔══════════❍╮
-║🔸𝐎𝐖𝐍 𝐍𝐀𝐌𝐄 ➻ᴡᴍʀ•ᴠᴀᴊɪʀᴀ
-║▪️𝐎𝐖𝐍 𝐍𝐔𝐁 ➻+94766943622
-║🔹𝐁𝐎𝐓 𝐒𝐏𝐄𝐄𝐃 ➻000.23
-║▫️𝐌𝐄𝐌𝐎𝐑𝐘 ➻64GB
-╚══════════❍╯
-    ╭─────────●
-    ╎𝙘𝙤𝙢𝙢𝙖𝙣𝙙 𝙡𝙞𝙨𝙩
-    ╰─────────●\n
+                    '' + `   😇 𝘏𝘌𝘓𝘓𝘖  *${citel.pushName}*,
+
+    👋 𝘐 𝘈𝘔 *𝘋𝘋𝘌𝘝 𝘉𝘖𝘛*. 𝘈 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘖𝘛 𝘊𝘙𝘌𝘈𝘛𝘌𝘋 𝘉𝘠 *𝘋𝘈𝘙𝘒 𝘋𝘌𝘝𝘐𝘓* 𝘛𝘖 𝘋𝘖 𝘌𝘝𝘌𝘙𝘠𝘛𝘏𝘐𝘕𝘎 𝘛𝘏𝘈𝘛 𝘐𝘚 𝘗𝘖𝘚𝘚𝘐𝘉𝘓𝘌 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘈𝘚𝘌𝘋 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘔𝘜𝘓𝘛𝘐 𝘋𝘌𝘝𝘐𝘊𝘌(𝘔𝘋) 𝘚𝘜𝘗𝘗𝘖𝘙𝘛.✌️
+    
+   ╔══════ 💻*𝚂𝙴𝚁𝚅𝙴𝚁*💻 ═══════════➤
+   ║
+   ║  *⏳𝚁𝚄𝙽𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
+   ║  *📼𝙼𝙴𝙼𝙾𝚁𝚈* : ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+   ║ 
+   ╟━━━━ 🤖 *𝙱𝙾𝚃 𝙸𝙽𝙵𝙾* 🤖 ━━━━━━━━━━➤
+   ║
+   ║  *🎻𝙿𝙴𝚁𝚂𝙾𝙽𝙾𝙻𝙸𝚃𝚈 :* 𝙳𝙳𝙴𝚅
+   ║  *👨‍💼𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 :* 𝙳𝙰𝚁𝙺 𝙳𝙴𝚅𝙸𝙻
+   ║  *🧬𝙱𝙾𝚃 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :* v.2.0.0
+   ║  *🖥️𝙿𝙻𝙰𝚃𝙵𝙾𝚁𝙼 :* 𝙰𝚆𝚂 𝚅𝙿𝚂
+   ╚══════════════════════════➤\n
 ` + ''
                 for (const category in cmds) 
                 {
-                   str += `╔═❋${tiny(category)}❋══❍\n` ;                   if(text.toLowerCase() == category.toLowerCase()){ str = `╔═❋ ${tiny(category)}\n❋══❍` ;      
-                        for (const plugins of cmds[category]) { str += `║🍁⃞➢ ${fancytext(plugins,1)}\n` ; }
-                        str += `╚════════════☉⚟\n`  ;
+                   str += ` ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;                
+                  if(text.toLowerCase() == category.toLowerCase()){ str = ` ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;      
+                        for (const plugins of cmds[category]) { str += ` ┃► ${fancytext(plugins,1)}\n` ; }
+                        str += ` ┗━━━━━━━━━━━━☉⚟\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `║ 🎋► ${fancytext(plugins,1)}\n` ; }
-                         str += `╚══════════☉⚟\n`  ; 
+                   else { for (const plugins of cmds[category]) { str += ` ┃► ${fancytext(plugins,1)}\n` ; }
+                         str += ` ┗━━━━━━━━━━━━☉⚟\n`  ; 
                    }
   
                 }
-                str+= `ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ.ᴠᴀᴊɪʀᴀ 
-ᴋɪɴɢ ᴠᴀᴊɪʀᴀ ᴍᴅ`
+                str+= `    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
                 let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str
@@ -93,36 +85,40 @@ Secktor.cmd({
     )
     //---------------------------------------------------------------------------
 Secktor.cmd({
-            pattern: "cmd",
-            desc: "cmd1",
-            category: "general"
-        },
-        async(Void, citel) => {
-            const { commands } = require('../lib');
-            let str = `
-╭━━〘 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〙━━──⊷`
-            str += `
-┃ ⛥╭──────────────      
-┃ ⛥│ User: ${citel.pushName}
-┃ ⛥│ Theme: ${tlang().title}
-┃ ⛥│ Prefix: ${prefix}
-┃ ⛥│ Owner: ${Config.ownername}
-┃ ⛥│ Commands: ${commands.length}
-┃ ⛥│ Uptime: ${runtime(process.uptime())}
-┃ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-┃ ⛥│  
-┃ ⛥╰───────────
-╰━━━━━━━━━━━──⊷\n`
-for (let i = 0; i < commands.length; i++) 
-{
-     if(commands[i].pattern==undefined) continue
-     str +=       `╭ ${i+1} *${fancytext(commands[i].pattern,1)}*\n` 
-     if(commands[i].desc=undefined) commands[i].desc=""
-     str += `╰➛ ${fancytext(commands[i].desc,1)}\n`
-}
-            return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
-        }
-    )
+    pattern: "cmd",
+    desc: "cmd1",
+    category: "general"
+},
+async (Void, citel) => {
+    const { commands } = require('../lib');
+    let str = `☀┉┉┉┉⥁` + fancytext(Config.ownername.split(' ')[0], 58) + `⥀┉┉┉┉☀`
+    str += `   😇 𝘏𝘌𝘓𝘓𝘖  *${citel.pushName}*,
+
+    👋 𝘐 𝘈𝘔 *𝘋𝘋𝘌𝘝 𝘉𝘖𝘛*. 𝘈 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘖𝘛 𝘊𝘙𝘌𝘈𝘛𝘌𝘋 𝘉𝘠 *𝘋𝘈𝘙𝘒 𝘋𝘌𝘝𝘐𝘓* 𝘛𝘖 𝘋𝘖 𝘌𝘝𝘌𝘙𝘠𝘛𝘏𝘐𝘕𝘎 𝘛𝘏𝘈𝘛 𝘐𝘚 𝘗𝘖𝘚𝘚𝘐𝘗𝘓𝘌 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘈𝘚𝘌𝘋 𝘖𝘕 𝘞𝘏𝘈𝘛𝘴𝘈𝘱𝘱 𝘔𝘜𝘭𝘵𝘐 𝘋𝘌𝘝𝘐𝘊𝘌(𝘔𝘋) 𝘚𝘜𝘗𝘗𝘖𝘙𝘛.✌️
+    
+   ╔══════ 💻*𝚂𝙴𝚁𝚅𝙴𝚁*💻 ═══════════➤
+   ║
+   ║  *⏳𝚁𝚄𝙽𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
+   ║  *📼𝙼𝙴𝙼𝙾𝚁𝚈* : ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+   ║ 
+   ╟━━━━ 🤖 *𝙱𝙾𝚃 𝙸𝙽𝙾* 🤖 ━━━━━━━━━━➤
+   ║
+   ║  *🎻𝙿𝙴𝚁𝚂𝙾𝙽𝙾𝙻𝙸𝚃𝚈 :* 𝙳𝙳𝙴𝚅
+   ║  *👨‍💼𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 :* 𝙳𝙰𝚁𝙺 𝙳𝙴𝚅𝙸𝙻
+   ║  *🧬𝙱𝙾𝚃 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :* v.2.0.0
+   ║  *🖥️𝙿𝙻𝙰𝚃𝙵𝙾𝚁𝙼 :* 𝙰𝚆𝚂 𝚅𝙿𝚂
+   ╚══════════════════════════➤\n`
+
+   for (let i = 0; i < commands.length; i++) {
+        if (commands[i].pattern == undefined) continue
+        str += `🔹${i+1} *${fancytext(commands[i].pattern, 1)}*\n`
+    }
+
+    // Modify this part to send the local MP4 video file as GIF
+    const videoPath = '../lib/assets/ddev.mp4'; // Replace with the actual local path
+    return await Void.sendMessage(citel.chat, { video: { file: videoPath }, caption: str });
+});
+
     //---------------------------------------------------------------------------
 Secktor.cmd({
         pattern: "owner",
@@ -144,7 +140,7 @@ Secktor.cmd({
             contextInfo: {
                 externalAdReply: {
                     title: Config.ownername,
-                    body: 'Touch here.',
+                    body: 'DARK DEVIL',
                     renderLargerThumbnail: true,
                     thumbnailUrl: ``,
                     thumbnail: log0,
@@ -172,10 +168,10 @@ async(Void, citel, text) => {
  const { commands } = require('../lib');
  let arr = [];
         const cmd = commands.find((cmd) => cmd.pattern === (text.split(" ")[0].toLowerCase()))
-        if (!cmd) return await citel.reply("*❌No Such commands.*");
-        else arr.push(`*🍁Command:* ${cmd.pattern}`);
-        if (cmd.category) arr.push(`*🧩Type:* ${cmd.category}`);
-        if(cmd.filename) arr.push(`✨FileName: ${cmd.filename}`)
+        if (!cmd) return await citel.reply("*🙉 𝙷𝙴𝚈 *${pushname}* 𝚃𝙷𝙸𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙰𝚁𝙴 𝙽𝙾𝚃 𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙼𝙴𝙳! 𝚃𝚈𝙿𝙴 *${prefix}ddev* 𝚃𝙾 𝙶𝙴𝚃 𝙼𝚈 𝙵𝚄𝙻𝙻 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙻𝙸𝚂𝚃!*");
+        else arr.push(`*🖱️ 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 :* ${cmd.pattern}`);
+        if (cmd.category) arr.push(`*📍 𝚃𝚈𝙿𝙴 :* ${cmd.category}`);
+        if(cmd.filename) arr.push(`✨ 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴 : ${cmd.filename}`)
         return citel.reply(arr.join('\n'));
 
 

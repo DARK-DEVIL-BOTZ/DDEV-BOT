@@ -4,7 +4,7 @@ cmd({
 
             pattern: "logo",
 
-            alias: ["ලෝගෝ","ලොගො","ලොගෝ","ලෝගො"],
+            alias: ["logo-maker"],
 
             desc: "some settings change.",
 

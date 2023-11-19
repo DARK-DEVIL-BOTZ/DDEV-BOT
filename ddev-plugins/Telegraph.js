@@ -1,16 +1,3 @@
-/**
-
-                                                            
- Copyright (C) 2023.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Izuku-Md
- * @author : excel <https://github.com/excelottah6>
- * @description : Izuku,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
-//---------------------------------------------------------------------------
 const { cmd } = require('../lib');
 const util = require('util');
 const axios = require('axios');
