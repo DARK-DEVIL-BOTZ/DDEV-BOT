@@ -20,8 +20,8 @@ async (Void, citel, text, { isCreator }) => {
     }
 
     updating = true;
-    let asciiBorder = '╔══════════════════════════╗\n';
-    asciiBorder += '║    Updater - KING VAJIRA MD    ║\n';
+   let asciiBorder ='╔══════════════════════════╗\n';
+    asciiBorder += '║           𝙳𝙳𝙴𝚅 𝚄𝙿𝙳𝙰𝚃𝙴𝚁             ║\n';
     asciiBorder += '╚══════════════════════════╝\n';
 
     // Create a loading bar
@@ -47,7 +47,7 @@ async (Void, citel, text, { isCreator }) => {
 
     // After the update process, send the final message
     const finalMessage = {
-        text: `${asciiBorder}📥vajira Update finished📥.`,
+        text: `${asciiBorder}♻️ 𝙳𝙳𝙴𝚅 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚄𝙿𝙳𝙰𝚃𝙴𝙳 ♻️.`,
         footer: 'UPDATER',
         headerType: 4
     };
