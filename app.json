@@ -1,6 +1,6 @@
 {
   "name": "DDEV-BOT",
-  "description": "Enhance your WhatsApp experience with DDEV-BOT, a Node.js-powered bot built to elevate your interactions.",
+  "description": "Enhance your WhatsApp experience with DDEV-BOT, A Node.js-powered bot built to elevate your interactions.",
   "logo": "https://graph.org/file/de88693dba23f64e3c9de.jpg",
   "keywords": ["DDEV-BOT", "MD", "WhatsApp bot", "dark-devil-botz", "multi-device", "Baileys"],
   "success_url": "/",
@@ -95,12 +95,12 @@
     },
     "AUTO_REACTION": {
       "description": "React with emojis to all commands.",
-      "value": "true",
+      "value": "false",
       "required": false
     },
     "PACK_INFO": {
-      "description": "Specify packname;authorname.",
-      "value": "🌹⃝⃘̉̉̉̉̉̉𝙳𝙳𝙴𝚅 𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂;𝙱𝚈 𝙳𝙰𝚁𝙺 𝙳𝙴𝚅𝙸𝙻۝⃟̥̩̩̩̥",
+      "description": "Specify authorname;packname.",
+      "value": "𝙱𝚈 𝙳𝙰𝚁𝙺 𝙳𝙴𝚅𝙸𝙻۝⃟̥̩̩̩̥;🌹⃝⃘̉̉̉̉̉̉𝙳𝙳𝙴𝚅 𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂",
       "required": false
     },
     "heroku": {

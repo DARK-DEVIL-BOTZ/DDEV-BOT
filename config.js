@@ -2,17 +2,17 @@ const fs = require('fs-extra');
 
 if (fs.existsSync('config.env')) require('dotenv').config({ path: __dirname + '/config.env' });
 
-//═══════════════════════════════════════════[𝚁𝙴𝚀𝚄𝙸𝚁𝙴𝙳 𝚅𝙰𝚁𝙸𝙰𝙱𝙻𝙴𝚂]═══════════════════════════════════════════\\
+//═══════════════════════════════════════════[𝚁𝙴𝚀𝚄𝙸𝚁𝙴𝙳 𝚅𝙰𝚁𝙸𝙰𝙱𝙻𝙴𝚂]════════════════════════════════════════\\
 global.owner = process.env.OWNER_NUMBER.split(",");
 global.mongodb = process.env.MONGODB_URI || "mongodb+srv://ddevofc:darkdevil@cluster0.4vtn9lo.mongodb.net/?retryWrites=true&w=majority";
 global.port = process.env.PORT || 5000;
 global.email = 'ddevofc@gmail.com';
 global.github = 'https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT';
 global.location = 'Kaluthara, Sri Lanka';
-global.gurl = 'https://malindunimsara.pages.dev';
+global.gurl = 'https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT';
 global.sudo = process.env.SUDO || '94703892615';
 global.devs = '94703892615';
-global.website = 'https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT';
+global.website = 'https://malindunimsara.pages.dev';
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/fb7993e24f7ecdaecbed5.jpg';
 
 //════════════════════════════════════════════════════════════════════════════════════════════════════\\

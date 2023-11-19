@@ -1,7 +1,7 @@
 {
   "name": "DDEV-BOT",
   "version": "2.0.0",
-  "description": "Elevate your WhatsApp experience with DDEV-BOT, a multi-device bot by Dark Devil.",
+  "description": "Elevate your WhatsApp experience with DDEV-BOT, A multi-device bot by Dark Devil.",
   "main": "lib/client.js",
   "type": "commonjs",
   "license": "GPL-3.0",
