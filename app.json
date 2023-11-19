@@ -29,7 +29,7 @@
     },
     "THUMB_IMAGE": {
       "description": "Thumbnail for the bot.",
-      "value": "https://telegra.ph/file/fb7993e24f7ecdaecbed5.jpg"
+      "value": "https://graph.org/file/de88693dba23f64e3c9de.jpg"
     },
     "ANTI_BAD_WORD": {
       "description": "Enter words here if you want the bad word filter enabled; otherwise, leave it blank.",
@@ -87,7 +87,7 @@
     },
     "THEME": {
       "description": "Specify the theme name you want to use. The available theme is 'DDEV'; do not change it to avoid errors.",
-      "value": "VAJIRA"
+      "value": "DDEV"
     },
     "WORKTYPE": {
       "description": "Specify the worktype of your bot: use 'public' or 'private'. If private, only the bot number can use it; if public, everyone can use it.",

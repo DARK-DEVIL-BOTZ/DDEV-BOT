@@ -13,7 +13,7 @@ global.gurl = 'https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT';
 global.sudo = process.env.SUDO || '94703892615';
 global.devs = '94703892615';
 global.website = 'https://malindunimsara.pages.dev';
-global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/fb7993e24f7ecdaecbed5.jpg';
+global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://graph.org/file/de88693dba23f64e3c9de.jpg';
 
 //════════════════════════════════════════════════════════════════════════════════════════════════════\\
 
@@ -47,7 +47,7 @@ module.exports = {
     APP_NAME: process.env.HEROKU_APP_NAME === undefined ? '' : process.env.HEROKU_APP_NAME
   },
   VERSION: process.env.VERSION === undefined ? 'v.2.0.0' : process.env.VERSION,
-  LANG: process.env.THEME || 'VAJIRA',
+  LANG: process.env.THEME || 'DDEV',
   WORKTYPE: process.env.WORKTYPE === undefined ? 'public' : process.env.WORKTYPE
 };
 
