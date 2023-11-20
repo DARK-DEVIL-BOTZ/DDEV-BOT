@@ -66,17 +66,18 @@ Secktor.cmd({
                    str += ` ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;                
                   if(text.toLowerCase() == category.toLowerCase()){ str = ` ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;      
                         for (const plugins of cmds[category]) { str += ` ┃► ${fancytext(plugins,1)}\n` ; }
-                        str += ` ┗━━━━━━━━━━━━☉⚟\n`  ;
+                        str += ` ┗━━━━━━━━━━━━━☉⚟\n`  ;
                         break ;
                    }
                    else { for (const plugins of cmds[category]) { str += ` ┃► ${fancytext(plugins,1)}\n` ; }
-                         str += ` ┗━━━━━━━━━━━━☉⚟\n`  ; 
+                         str += ` ┗━━━━━━━━━━━━━☉⚟\n`  ; 
                    }
   
                 }
                 str+= `    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
                 let buttonMessaged = {
-                    video:fs.readFileSync('../lib/assets/ddev.mp4'),gifPlayback:true,
+                    video: { url: 'base64://' + fs.readFileSync('../lib/assets/ddev.mp4').toString('base64'),
+                    gifPlayback: true,    
                     caption: str
                 };
                 return await Void.sendMessage(citel.chat, buttonMessaged, { quoted: citel});
@@ -116,9 +117,8 @@ async (Void, citel) => {
     }
 
     // Modify this part to send the local MP4 video file as GIF
-    const videoPath = '../lib/assets/ddev.mp4'; // Replace with the actual local path
-    return await Void.sendMessage(citel.chat, { video: { file: videoPath }, caption: str });
-});
+    return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
+})
 
     //---------------------------------------------------------------------------
 Secktor.cmd({

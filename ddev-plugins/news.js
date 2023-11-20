@@ -24,7 +24,7 @@ cmd({
               const title = `${nasa.result.title}`  
               const news = `${nasa.result.desc}`   
   
-   await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `📃ＮＡＳＡ ＢＹ ＶＡＪＩＲＡ\n\n*${ title }*\n\n _${news}._\n\n*📌 ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ...`}, { quoted: citel })   
+   await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `     ‼️ *𝙽𝙰𝚂𝙰 𝙽𝙴𝚆𝚂 𝙰𝙻𝙴𝚁𝚃𝚂* ‼️\n\n🎯 *𝙷𝙴𝙰𝙳𝙻𝙸𝙽𝙴* : ${ title }\n\n📰 *𝙳𝙴𝚂𝙲𝚁𝙴𝙿𝚃𝙸𝙾𝙽* : ${news}.\n\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`}, { quoted: citel })   
    }   
    catch(e){   
    console.log(e)   
@@ -50,7 +50,7 @@ cmd({
              const date = `${technews.time}`
              const news = `${technews.result.decs}`  
   
-  await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `📃ＴＥＣＨＮＥＷＳ ＢＹ ＶＡＪＩＲＡ\n\n${ title }\n\n ${ news }\n\n${date}\n📌 ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ...`}, { quoted: citel })  
+  await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `     ‼️ *𝚃𝙴𝙲𝙷 𝙽𝙴𝚆𝚂 𝙰𝙻𝙴𝚁𝚃𝚂* ‼️\n\n🎯 𝙷𝙴𝙰𝙳𝙻𝙸𝙽𝙴 : ${ title }\n\n📰 *𝙳𝙴𝚂𝙲𝚁𝙴𝙿𝚃𝙸𝙾𝙽* : ${ news }\n\n🗓️ *𝙳𝙰𝚃𝙴* : ${date}\n\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`}, { quoted: citel })  
   }  
   catch(e){  
   console.log(e)  
@@ -73,7 +73,7 @@ cmd({
         const dss = news.results.DESCRIPTION; 
         const ttime = news.results.PUBLISHED; 
         const img = news.results.COVER; 
-        const cap = `   ‼️ *𝙴𝚂𝙰𝙽𝙰 𝙽𝙴𝚆𝚂 𝙰𝙻𝙴𝚁𝚃𝚂* ‼️\n\n🎯 𝙷𝙴𝙰𝙳𝙻𝙸𝙽𝙴 : ${tt} \n\n📰 𝙳𝙴𝚂𝙲𝚁𝙴𝙿𝚃𝙸𝙾𝙽 : ${dss} \n\n🗓️ 𝙳𝙰𝚃𝙴 :- ${ttime} \n\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`; 
+        const cap = `     ‼️ *𝙴𝚂𝙰𝙽𝙰 𝙽𝙴𝚆𝚂 𝙰𝙻𝙴𝚁𝚃𝚂* ‼️\n\n🎯 𝙷𝙴𝙰𝙳𝙻𝙸𝙽𝙴 : ${tt} \n\n📰 𝙳𝙴𝚂𝙲𝚁𝙴𝙿𝚃𝙸𝙾𝙽 : ${dss} \n\n🗓️ 𝙳𝙰𝚃𝙴 :- ${ttime} \n\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`; 
                  await Void.sendMessage(citel.chat,{image:{url: img}, caption: cap})
  }) 
 //---------------------------------------------------------------------------
@@ -94,7 +94,7 @@ cmd({
              const date = `${hirunews.time}`  
              const news = `${hirunews.desc}`  
   
-  await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `💡 *𝙷𝙸𝚁𝚄 𝙽𝙴𝚆𝚂 𝙰𝙻𝙴𝚁𝚃𝚂* 💡\n\n🎯 𝙷𝙴𝙰𝙳𝙻𝙸𝙽𝙴 : ${ title }\n\n📰 𝙳𝙴𝚂𝙲𝚁𝙴𝙿𝚃𝙸𝙾𝙽 :  ${ news }\n\n🗓️ *𝙳𝙰𝚃𝙴* : ${date}\n\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`}, { quoted: citel })  
+  await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `     ‼️ *𝙷𝙸𝚁𝚄 𝙽𝙴𝚆𝚂 𝙰𝙻𝙴𝚁𝚃𝚂* ‼️\n\n🎯 𝙷𝙴𝙰𝙳𝙻𝙸𝙽𝙴 : ${ title }\n\n📰 𝙳𝙴𝚂𝙲𝚁𝙴𝙿𝚃𝙸𝙾𝙽 :  ${ news }\n\n🗓️ *𝙳𝙰𝚃𝙴* : ${date}\n\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`}, { quoted: citel })  
   }  
   catch(e){  
   console.log(e)  
