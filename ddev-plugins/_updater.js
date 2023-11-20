@@ -1,4 +1,4 @@
-const DB = require('../lib/scraper');
+const DB2 = require('../lib/scraper');
 const { execSync } = require('child_process');
 const { tlang, Config, prefix, cmd, sleep } = require('../lib');
 
