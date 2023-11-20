@@ -44,7 +44,7 @@ cmd({
 
 //---------------------------------------------------------------------------
 cmd({
-        pattern: "install".
+        pattern: "install",
         category: "owner",
         react: "⚙️",
         desc: "Installs external modules..",

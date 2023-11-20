@@ -42,13 +42,11 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('Asia/Colombo').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `☀┉┉┉┉⥁` + fancytext(Config.ownername.split('DDEV BOT')[0], 58) + `⥀┉┉┉┉☀\n`
-                str +=
-                    '' + `   😇 𝘏𝘌𝘓𝘓𝘖  *${citel.pushName}*,
-
-    👋 𝘐 𝘈𝘔 *𝘋𝘋𝘌𝘝 𝘉𝘖𝘛*. 𝘈 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘖𝘛 𝘊𝘙𝘌𝘈𝘛𝘌𝘋 𝘉𝘠 *𝘋𝘈𝘙𝘒 𝘋𝘌𝘝𝘐𝘓* 𝘛𝘖 𝘋𝘖 𝘌𝘝𝘌𝘙𝘠𝘛𝘏𝘐𝘕𝘎 𝘛𝘏𝘈𝘛 𝘐𝘚 𝘗𝘖𝘚𝘚𝘐𝘉𝘓𝘌 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘈𝘚𝘌𝘋 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘔𝘜𝘓𝘛𝘐 𝘋𝘌𝘝𝘐𝘊𝘌(𝘔𝘋) 𝘚𝘜𝘗𝘗𝘖𝘙𝘛.✌️
+                let str = `   😇 𝘏𝘌𝘓𝘓𝘖` + fancytext(citel.pushName.split(' ')[0], 58) + `,`
+                str += '' + `   
+     👋 𝘐 𝘈𝘔 *𝘋𝘋𝘌𝘝 𝘉𝘖𝘛*. 𝘈 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘖𝘛 𝘊𝘙𝘌𝘈𝘛𝘌𝘋 𝘉𝘠 *𝘋𝘈𝘙𝘒 𝘋𝘌𝘝𝘐𝘓* 𝘛𝘖 𝘋𝘖 𝘌𝘝𝘌𝘙𝘠𝘛𝘏𝘐𝘕𝘎 𝘛𝘏𝘈𝘛 𝘐𝘚 𝘗𝘖𝘚𝘚𝘐𝘉𝘓𝘌 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘈𝘚𝘌𝘋 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘔𝘜𝘓𝘛𝘐 𝘋𝘌𝘝𝘐𝘊𝘌(𝘔𝘋) 𝘚𝘜𝘗𝘗𝘖𝘙𝘛.✌️
     
-   ╔══════ 💻*𝚂𝙴𝚁𝚅𝙴𝚁*💻 ═════════➤
+   ╔══════ 💻 *𝚂𝙴𝚁𝚅𝙴𝚁* 💻 ════════➤
    ║
    ║  *⏳𝚁𝚄𝙽𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
    ║  *📼𝙼𝙴𝙼𝙾𝚁𝚈* : ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
@@ -76,8 +74,7 @@ Secktor.cmd({
                 }
                 str+= `    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
                 let buttonMessaged = {
-                    video: { url: 'base64://' + fs.readFileSync('../lib/assets/ddev.mp4').toString('base64')},
-                    gifPlayback: true,    
+                    video: { url: THUMB_VIDEO },
                     caption: str
                 };
                 return await Void.sendMessage(citel.chat, buttonMessaged, { quoted: citel});
@@ -94,12 +91,11 @@ Secktor.cmd({
 },
 async (Void, citel) => {
     const { commands } = require('../lib');
-    let str = `☀┉┉┉┉⥁` + fancytext(Config.ownername.split(' ')[0], 58) + `⥀┉┉┉┉☀`
-    str += `   😇 𝘏𝘌𝘓𝘓𝘖  *${citel.pushName}*,
-
-    👋 𝘐 𝘈𝘔 *𝘋𝘋𝘌𝘝 𝘉𝘖𝘛*. 𝘈 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘖𝘛 𝘊𝘙𝘌𝘈𝘛𝘌𝘋 𝘉𝘠 *𝘋𝘈𝘙𝘒 𝘋𝘌𝘝𝘐𝘓* 𝘛𝘖 𝘋𝘖 𝘌𝘝𝘌𝘙𝘠𝘛𝘏𝘐𝘕𝘎 𝘛𝘏𝘈𝘛 𝘐𝘚 𝘗𝘖𝘚𝘚𝘐𝘗𝘓𝘌 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘈𝘚𝘌𝘋 𝘖𝘕 𝘞𝘏𝘈𝘛𝘴𝘈𝘱𝘱 𝘔𝘜𝘭𝘵𝘐 𝘋𝘌𝘝𝘐𝘊𝘌(𝘔𝘋) 𝘚𝘜𝘗𝘗𝘖𝘙𝘛.✌️
+    let str = `   😇 𝘏𝘌𝘓𝘓𝘖` + fancytext(citel.pushName.split(' ')[0], 58) + `,`
+    str += `
+      👋 𝘐 𝘈𝘔 *𝘋𝘋𝘌𝘝 𝘉𝘖𝘛*. 𝘈 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘖𝘛 𝘊𝘙𝘌𝘈𝘛𝘌𝘋 𝘉𝘠 *𝘋𝘈𝘙𝘒 𝘋𝘌𝘝𝘐𝘓* 𝘛𝘖 𝘋𝘖 𝘌𝘝𝘌𝘙𝘠𝘛𝘏𝘐𝘕𝘎 𝘛𝘏𝘈𝘛 𝘐𝘚 𝘗𝘖𝘚𝘚𝘐𝘗𝘓𝘌 𝘖𝘕 𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗 𝘉𝘈𝘚𝘌𝘋 𝘖𝘕 𝘞𝘏𝘈𝘛𝘴𝘈𝘱𝘱 𝘔𝘜𝘭𝘵𝘐 𝘋𝘌𝘝𝘐𝘊𝘌(𝘔𝘋) 𝘚𝘜𝘗𝘗𝘖𝘙𝘛.✌️
     
-   ╔══════ 💻*𝚂𝙴𝚁𝚅𝙴𝚁*💻 ═════════➤
+   ╔══════ 💻 *𝚂𝙴𝚁𝚅𝙴𝚁* 💻 ════════➤
    ║
    ║  *⏳𝚁𝚄𝙽𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
    ║  *📼𝙼𝙴𝙼𝙾𝚁𝚈* : ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
@@ -110,12 +106,13 @@ async (Void, citel) => {
    ║  *👨‍💼𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 :* 𝙳𝙰𝚁𝙺 𝙳𝙴𝚅𝙸𝙻
    ║  *🧬𝙱𝙾𝚃 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :* v.2.0.0
    ║  *🖥️𝙿𝙻𝙰𝚃𝙵𝙾𝚁𝙼 :* 𝙰𝚆𝚂 𝚅𝙿𝚂
-   ╚═════════════════════════➤\n`
+   ╚═════════════════════════➤\n\n`
 
    for (let i = 0; i < commands.length; i++) {
         if (commands[i].pattern == undefined) continue
         str += `🔹${i+1} *${fancytext(commands[i].pattern, 1)}*\n`
     }
+    str+= `    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
 
     // Modify this part to send the local MP4 video file as GIF
     return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
@@ -148,7 +145,7 @@ Secktor.cmd({
                     thumbnail: log0,
                     mediaType: 2,
                     mediaUrl: '',
-                    sourceUrl: `https://wa.me/+` + owner[0] + '?text=Hii bro,I am ' + citel.pushName,
+                    sourceUrl: `https://wa.me/+` + owner[0] + '?text=Hii, I am ' + citel.pushName,
                 },
             },
         };
