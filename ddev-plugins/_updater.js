@@ -1,78 +1,9 @@
-const DB2 = require('../lib/scraper');
-const { execSync } = require('child_process');
-const { tlang, Config, prefix, cmd, sleep } = require('../lib');
-
-let updating = false;
-
-cmd({
-    pattern: "update",
-    desc: "Shows repo's refreshed commits.",
-    category: "misc",
-    react: "⚙️",
-    filename: __filename
-},
-async (Void, citel, text, { isCreator }) => {
-    if (!isCreator) return citel.reply('This command is only for my owner');
-
-    if (updating) {
-        citel.reply("An update is already in progress. Please wait.");
-        return;
-    }
-
-    updating = true;
-   let asciiBorder ='╔══════════════════════════╗\n';
-    asciiBorder += '║           𝙳𝙳𝙴𝚅 𝚄𝙿𝙳𝙰𝚃𝙴𝚁             ║\n';
-    asciiBorder += '╚══════════════════════════╝\n';
-
-    // Create a loading bar
-    const loadingBarLength = 20;
-    const loadingMessage = {
-        text: `${asciiBorder}Updating: [${' '.repeat(loadingBarLength)}] 0%`,
-        footer: 'UPDATER',
-        headerType: 4
-    };
-    const { key } = await Void.sendMessage(citel.chat, loadingMessage);
-
-    // Simulate an update process (you can replace this with your actual update logic)
-    for (let i = 1; i <= loadingBarLength; i++) {
-        await sleep(1000); // Simulate a step in the update process
-        const progress = (i / loadingBarLength) * 100;
-        const updatedMessage = {
-            text: `${asciiBorder}Updating: [${'█'.repeat(i)}${' '.repeat(loadingBarLength - i)}] ${progress.toFixed(0)}%`,
-            footer: 'UPDATER',
-            headerType: 4
-        };
-        await Void.sendMessage(citel.chat, updatedMessage, { edit: key });
-    }
-
-    // After the update process, send the final message
-    const finalMessage = {
-        text: `${asciiBorder}♻️ 𝙳𝙳𝙴𝚅 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚄𝙿𝙳𝙰𝚃𝙴𝙳 ♻️.`,
-        footer: 'UPDATER',
-        headerType: 4
-    };
-    await Void.sendMessage(citel.chat, finalMessage, { edit: key });
-    updating = false;
-});
-
-   //---------------------------------------------------------------------------  
-/**
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
-
 const DB = require('../lib/scraper')
 const { execSync } = require('child_process')
 const { tlang, Config, prefix,cmd } = require('../lib')
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "update2",
+            pattern: "update",
             desc: "Shows repo\'s refreshed commits.",
             category: "misc",
             react: "⚙️",
@@ -97,9 +28,10 @@ cmd({
     )
   //---------------------------------------------------------------------------
 cmd({
-                 pattern: "updatenow2",
+                 pattern: "updatenow",
                  desc: "Shows repo\'s refreshed commits.",
                  category: "tools",
+                 react: "⚙️",
                  filename: __filename
              },
         async(Void, citel, text,{ isCreator }) => {
@@ -107,7 +39,7 @@ cmd({
                 let commits = await DB.syncgit()
                 if (commits.total === 0) return citel.reply(`*YOU HAVE LATEST VERSION INSTALLED!*`)
                 let update = await DB.sync()
-                await msg.send(" *VAJIRA_MD Updater Started...!*\n\n*Please wait you have new updates*\n *───────────────────────────*\n"+update +"\n\n\n"+Config.caption);
+                await msg.send(" *𝙳𝙳𝙴𝚅 𝚄𝙿𝙳𝙰𝚃𝙴𝚁 𝚂𝚃𝙰𝚁𝚃𝙴𝙳...!*\n\n*Please wait you have new updates*\n *───────────────────────────*\n"+update +"\n\n\n"+Config.caption);
                 await sleep(3000);
           try{
                let res = await updateHerokuApp('no');
