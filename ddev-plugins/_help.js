@@ -76,7 +76,7 @@ Secktor.cmd({
                 }
                 str+= `    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
                 let buttonMessaged = {
-                    video: { url: 'base64://' + fs.readFileSync('../lib/assets/ddev.mp4').toString('base64'),
+                    video: { url: 'base64://' + fs.readFileSync('../lib/assets/ddev.mp4').toString('base64')},
                     gifPlayback: true,    
                     caption: str
                 };
@@ -84,6 +84,7 @@ Secktor.cmd({
             }
         }
     )
+    
     
     //---------------------------------------------------------------------------
 Secktor.cmd({
