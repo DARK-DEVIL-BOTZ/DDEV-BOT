@@ -62,7 +62,7 @@ cmd({
                 url: videolink ,
                 },
                 mimetype: "audio/mpeg",
-                fileName: `prabath-md-fb-song-downloader`,
+                fileName: `© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ`,
 
             }, {
                 quoted: citel,
@@ -81,8 +81,8 @@ cmd({
         async(Void, citel, text) => {
         if (!text) return citel.reply(`*Give Me A Text*`);           
 
-            pack = `𝚅𝙰𝙹𝙸𝚁𝙰-𝚖𝚍 (9.𝟷.𝟶) ✔️`
-            author = `𝚅𝙰𝙹𝙸𝚁𝙰\n𝙼𝙰𝙳𝙴 𝙱𝚈 𝚅𝙰𝙹𝙸𝚁𝙰 🪀`            
+            pack = `𝙳𝙳𝙴𝚅 𝙱𝙾𝚃`
+            author = `𝙳𝙰𝚁𝙺 𝙳𝙴𝚅𝙸𝙻 𝙱𝙾𝚃𝚉`            
 
                 let image = `https://api.botcahx.biz.id/api/randomgambar/dadu?apikey=${Config.botapikey}`
                 citel.react("🎲");

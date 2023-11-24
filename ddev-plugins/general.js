@@ -14,7 +14,7 @@ cmd({
 async(Void, citel,text) => {
     let zx = text.length;
     if (zx < 8) {
-        let {data} = await axios.get(`http://api.brainshop.ai/get?bid=167991&key=aozpOoNOy3dfLgmB&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
+        let {data} = await axios.get(`http://api.brainshop.ai/get?bid=179125&key=NBehLa7z6HBV2SUJ&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
         return citel.reply(data.cnt);  
     }
     if (!text) return citel.reply(`𝙷𝙴𝚈 𝚃𝙷𝙴𝚁𝙴! ${citel.pushName}. 𝚃𝙴𝙻𝙻 𝚃𝙾 𝙳𝙳𝙴𝚅, 𝙰𝙱𝙾𝚄𝚃 𝚈𝙾𝚄𝚁𝚂𝙴𝙻𝙵! `);
@@ -70,7 +70,7 @@ body: JSON.stringify({
 const data = await response.json();
 let buttonMessage = {
     image:{url:data.data[0].url},
-    caption : '*✅ 𝚈𝙾𝚄𝚁 𝙳𝙰𝙻𝙻-𝙴 𝚁𝙴𝚂𝚄𝙻𝚃𝚂!*'
+    caption : '✅ *𝚈𝙾𝚄𝚁 𝙳𝙰𝙻𝙻-𝙴 𝚁𝙴𝚂𝚄𝙻𝚃𝚂!*'
 
 }
 
@@ -99,10 +99,10 @@ cmd({
                 externalAdReply: {
                     title: "© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀʀᴋ ᴅᴇᴠɪʟ",
                     body: "ᴼᶠᶠᴵᶜᴵᴬᴸ ᴰᴰᴱⱽ ᴿᴱᴾᴼ",
-                    thumbnail: log0,
+                    thumbnail: `https://telegra.ph/file/7a4d07df9942aef1d27b0.jpg`,
                     mediaType: 4,
-                    mediaUrl: '',
-                    sourceUrl: ``,
+                    mediaUrl: 'https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT',
+                    sourceUrl: `https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT`,
                 },
             },
         };
@@ -126,15 +126,15 @@ cmd({
         timestampe = speed();
         latensie = speed() - timestampe;
         let ter = `
-┏━━━━━━━༺*${tlang().title}*༻━━━━━━━▶
+┏━━━━━━༺*${tlang().title}*༻━━━━━━━⫸
 ┃ 
-┃☞*📃 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽* : Elevate your WhatsApp experience with DDEV-BOT, A multi-device bot by Dark Devil.
-┃☞*📈 𝚂𝙿𝙴𝙴𝙳* : ${latensie.toFixed(4)} 𝚖𝚜
-┃☞*⏳ 𝚄𝙿𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
-┃☞*🧬 𝚅𝙴𝚁𝚂𝙸𝙾𝙽* : 2.0.0
-┃☞*👤 𝙾𝚆𝙽𝙴𝚁* : ${Config.ownername}
+┃☞📈 *𝚂𝙿𝙴𝙴𝙳* : ${latensie.toFixed(4)} 𝚖𝚜
+┃☞⏳ *𝚄𝙿𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
+┃☞🧬 *𝚅𝙴𝚁𝚂𝙸𝙾𝙽* : 2.0.0
+┃☞👤 *𝙾𝚆𝙽𝙴𝚁* : ${Config.ownername}
+┃☞📃 *𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽* : Elevate your WhatsApp experience with DDEV-BOT, A multi-device bot by Dark Devil.
 ┃    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━▶ `;
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━⫸ `;
         let buttonMessaged = {
             video: {
                 url: THUMB_VIDEO},
@@ -144,12 +144,12 @@ cmd({
                 headerType: 4,
                 contextInfo: {
                 externalAdReply: {
-                    title: tlang().title,
-                    body: `Bot-Status`,
-                    thumbnail: log0,
+                    title: `*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`,
+                    body: `ᴮᴼᵀ ˢᵀᴬᵀᵁˢ`,
+                    thumbnail: `https://telegra.ph/file/7a4d07df9942aef1d27b0.jpg`,
                     mediaType: 2,
-                    mediaUrl: ``,
-                    sourceUrl: ``,
+                    mediaUrl: `https://malindunimsara.pages.dev`,
+                    sourceUrl: `https://malindunimsara.pages.dev`,
                 },
             },
         };

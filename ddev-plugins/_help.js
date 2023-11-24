@@ -62,18 +62,18 @@ Secktor.cmd({
 ` + ''
                 for (const category in cmds) 
                 {
-                   str += ` ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;                
-                  if(text.toLowerCase() == category.toLowerCase()){ str = ` ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;      
-                        for (const plugins of cmds[category]) { str += ` ┃► ${fancytext(plugins,1)}\n` ; }
-                        str += ` ┗━━━━━━━━━━━━━☉⚟\n`  ;
+                   str += `  ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;                
+                  if(text.toLowerCase() == category.toLowerCase()){ str = `  ┏ ☁ *${tiny(category)}* ☁ ━━━➢\n` ;      
+                        for (const plugins of cmds[category]) { str += `  ┃► ${fancytext(plugins,1)}\n` ; }
+                        str += `  ┗━━━━━━━━━━━━━☉⚟\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += ` ┃► ${fancytext(plugins,1)}\n` ; }
-                         str += ` ┗━━━━━━━━━━━━━☉⚟\n`  ; 
+                   else { for (const plugins of cmds[category]) { str += `  ┃► ${fancytext(plugins,1)}\n` ; }
+                         str += `  ┗━━━━━━━━━━━━━☉⚟\n`  ; 
                    }
   
                 }
-                str+= `\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
+                str+= `\n     *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
                 let buttonMessaged = {
                     video: { url: THUMB_VIDEO },
                     gifPlayback:true,
@@ -113,9 +113,9 @@ async (Void, citel) => {
 
    for (let i = 0; i < commands.length; i++) {
         if (commands[i].pattern == undefined) continue
-        str += `🔹${i+1} *${fancytext(commands[i].pattern, 1)}*\n`
+        str += `  🔹${i+1} *${fancytext(commands[i].pattern, 1)}*\n`
     }
-    str+= `\n    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
+    str+= `\n     *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*`
 
     // Modify this part to send the local MP4 video file as GIF
     return await Void.sendMessage(citel.chat, { video: { url: THUMB_VIDEO }, gifPlayback:true, caption: str })
