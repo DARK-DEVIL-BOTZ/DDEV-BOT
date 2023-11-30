@@ -12,7 +12,7 @@ global.location = 'Kaluthara, Sri Lanka';
 global.gurl = 'https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT';
 global.sudo = process.env.SUDO || '94703892615';
 global.devs = '94703892615';
-global.website = 'https://malindunimsara.pages.dev';
+global.website = 'https://malindunimsara.free.nf';
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://graph.org/file/de88693dba23f64e3c9de.jpg';
 global.THUMB_VIDEO = process.env.THUMB_VIDEO || 'https://telegra.ph/file/c883e7c277b4ac57ebee1.mp4';
 
