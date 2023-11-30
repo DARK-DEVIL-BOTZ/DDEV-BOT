@@ -3,40 +3,59 @@ const axios = require('axios')
 const speed = require('performance-now')
 const fetch = require('node-fetch');
 //---------------------------------------------------------------------------
+
 cmd({
     pattern: "chat",
-    alias :['gpt'],
+    alias: ['gpt'],
     desc: "chat with an AI(GPT)",
     category: "AI",
-    use: '<Hii,how can i help you>',
+    use: '<Hii, how can I help you>',
     filename: __filename,
 },
-async(Void, citel,text) => {
+async (Void, citel, text) => {
     let zx = text.length;
     if (zx < 8) {
-        let {data} = await axios.get(`http://api.brainshop.ai/get?bid=179125&key=NBehLa7z6HBV2SUJ&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
-        return citel.reply(data.cnt);  
+        try {
+            let { data } = await axios.get(`http://api.brainshop.ai/get?bid=179125&key=NBehLa7z6HBV2SUJ&uid=[${citel.sender.split("@")[0]}]&msg=[${text}]`);
+            citel.reply(data.cnt);
+        } catch (error) {
+            console.error("Error in Brainshop API call:", error);
+            citel.reply("Error in processing your request.");
+        }
+        return;
     }
-    if (!text) return citel.reply(`𝙷𝙴𝚈 𝚃𝙷𝙴𝚁𝙴! ${citel.pushName}. 𝚃𝙴𝙻𝙻 𝚃𝙾 𝙳𝙳𝙴𝚅, 𝙰𝙱𝙾𝚄𝚃 𝚈𝙾𝚄𝚁𝚂𝙴𝙻𝙵! `);
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${Config.OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-3.5-turbo", 
-      messages: [{ role: "system", content: "You" }, { role: "user", content: text }],
-    }),
-  });
 
-  const data = await response.json();
-  console.log("GPT REPONCE : ",data); 
-  if (!data.choices || data.choices.length === 0) {citel.reply("*𝙸𝙽𝚅𝙰𝙻𝙸𝙸𝙳 𝙲𝙷𝙰𝚃𝙶𝙿𝚃 𝙰𝙿𝙸 𝙺𝙴𝚈, 𝙿𝙻𝙴𝙰𝚂𝙴 𝙸𝙽𝚂𝙴𝚁𝚃 𝙰𝙿𝙸 𝙺𝙴𝚈*"); }
-  return await  citel.reply(data.choices[0].message.content)
-	
-}
-)
+    if (!text) {
+        citel.reply(`𝙷𝙴𝚈 𝚃𝙷𝙴𝚁𝙴! ${citel.pushName}. 𝚃𝙴𝙻𝙻 𝚃𝙾 𝙳𝙳𝙴𝚅, 𝙰𝙱𝙾𝚄𝚃 𝚈𝙾𝚄𝚁𝚂𝙴𝙻𝙵! `);
+        return;
+    }
+
+    const response = fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${Config.OPENAI_API_KEY}`,
+        },
+        body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [{ role: "system", content: "You" }, { role: "user", content: text }],
+        }),
+    });
+
+    response.then(async (res) => {
+        const data = await res.json();
+        console.log("GPT RESPONSE:", data);
+        if (!data.choices || data.choices.length === 0) {
+            citel.reply("*𝙸𝙽𝚅𝙰𝙻𝙸𝙸𝙳 𝙲𝙷𝙰𝚃𝙶𝙿𝚃 𝙰𝙿𝙸 𝙺𝙴𝚈, 𝙿𝙻𝙴𝙰𝚂𝙴 𝙸𝙽𝚂𝙴𝚁𝚃 𝙰𝙿𝙸 𝙺𝙴𝚈*");
+        } else {
+            citel.reply(data.choices[0].message.content);
+        }
+    }).catch((error) => {
+        console.error("Error in OpenAI API call:", error);
+        citel.reply("Error in processing your request.");
+    });
+});
+
 
 cmd({
     pattern: "dalle",
@@ -84,7 +103,7 @@ cmd({
         alias: ["git", "sc", "script"],
         desc: "Sends info about repo.",
         category: "general",
-	react: "🎁",
+	    react: "🎁",
         filename: __filename,
     },
     async(Void, citel) => {
@@ -101,8 +120,8 @@ cmd({
                     body: "ᴼᶠᶠᴵᶜᴵᴬᴸ ᴰᴰᴱⱽ ᴿᴱᴾᴼ",
                     thumbnail: `https://telegra.ph/file/7a4d07df9942aef1d27b0.jpg`,
                     mediaType: 4,
-                    mediaUrl: 'https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT',
-                    sourceUrl: `https://github.com/DARK-DEVIL-BOTZ/DDEV-BOT`,
+                    mediaUrl: ``,
+                    sourceUrl: ``,
                 },
             },
         };
@@ -118,7 +137,7 @@ cmd({
         alias: ["about"],
         desc: "To check bot status",
         category: "general",
-	react: "🎰",
+	    react: "🎰",
         filename: __filename,
     },
     async(Void, citel) => {
@@ -132,8 +151,8 @@ cmd({
 ┃☞⏳ *𝚄𝙿𝚃𝙸𝙼𝙴* : ${runtime(process.uptime())}
 ┃☞🧬 *𝚅𝙴𝚁𝚂𝙸𝙾𝙽* : 2.0.0
 ┃☞👤 *𝙾𝚆𝙽𝙴𝚁* : ${Config.ownername}
-┃☞📃 *𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽* : Elevate your WhatsApp experience with DDEV-BOT, A multi-device bot by Dark Devil.
-┃    *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴅᴇᴠ ʙᴏᴛ*
+┃☞📃 *𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽* : Elevate your WhatsApp
+┃ experience with DDEV-BOT, A multi-device bot by Dark Devil.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━⫸ `;
         let buttonMessaged = {
             video: {
@@ -148,8 +167,8 @@ cmd({
                     body: `ᴮᴼᵀ ˢᵀᴬᵀᵁˢ`,
                     thumbnail: `https://telegra.ph/file/7a4d07df9942aef1d27b0.jpg`,
                     mediaType: 2,
-                    mediaUrl: `https://malindunimsara.pages.dev`,
-                    sourceUrl: `https://malindunimsara.pages.dev`,
+                    mediaUrl: ``,
+                    sourceUrl: ``,
                 },
             },
         };
